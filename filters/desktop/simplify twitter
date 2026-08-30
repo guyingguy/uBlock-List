@@ -20,11 +20,7 @@
 
 
 
-! Timeline:Explore
-! Removes all tweets
-x.com##:not(:matches-path(/communities)):matches-path(/explore) [data-testid="cellInnerDiv"]:has([data-testid="tweet"])
-! Removes "Posts for you"
-x.com##:not(:matches-path(/communities)):matches-path(/explore) [data-testid="cellInnerDiv"]:has([role="heading"]) ~ [data-testid="cellInnerDiv"]:has([role="heading"]) ~ [data-testid="cellInnerDiv"]:has([role="heading"])
+
 
 ! Timeline:Search
 ! Removes all follow suggestions and communities
@@ -43,11 +39,6 @@ x.com##[data-testid="primaryColumn"]:has([data-testid="UserName"]) [data-testid=
 x.com##[data-testid="primaryColumn"]:has([data-testid="UserName"]):not(:has([href$="/followers_you_follow"])) [data-testid="UserName"]:upward(1) >:not(:has([href$="/following"])):last-child
 
 ! Timeline:Coversation
-! Removes "Discover more" and all tweets succeeding it
-x.com##:matches-path(/status) body:not(:has([data-testid="mask"])) [data-testid="cellInnerDiv"]:not(:has([data-testid="twitterArticleReadView"])):has(h2)
-x.com##:matches-path(/status) body:not(:has([data-testid="mask"])) [data-testid="cellInnerDiv"]:not(:has([data-testid="twitterArticleReadView"])):has(h2) ~*
-! Removes "Discover more" inside of the enlarged image view
-x.com##:matches-path(/status) [data-testid="mask"] ~* [data-testid="cellInnerDiv"]:not(:has([data-testid="twitterArticleReadView"])):has(h2)
 x.com##:matches-path(/status) [data-testid="mask"] ~* [data-testid="cellInnerDiv"]:not(:has([data-testid="twitterArticleReadView"])):has(h2) ~*
 ! Post analytics. Will only remove reduntant tweets in Timeline:Coversation
 x.com##:matches-path(/analytics) body:has([data-testid="inline_reply_offscreen"]) button:has([data-testid="testCondensedMedia"])
