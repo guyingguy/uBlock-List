@@ -40,8 +40,6 @@ x.com##[data-testid="primaryColumn"]:has([data-testid="UserName"]):not(:has([hre
 
 ! Timeline:Coversation
 x.com##:matches-path(/status) [data-testid="mask"] ~* [data-testid="cellInnerDiv"]:not(:has([data-testid="twitterArticleReadView"])):has(h2) ~*
-! Post analytics. Will only remove reduntant tweets in Timeline:Coversation
-x.com##:matches-path(/analytics) body:has([data-testid="inline_reply_offscreen"]) button:has([data-testid="testCondensedMedia"])
 ! Access your post analytics (Premium upsell)
 x.com##[data-testid="tweet"] [href="/i/account_analytics"]:upward(3)
 ! Removes Post Engagements
