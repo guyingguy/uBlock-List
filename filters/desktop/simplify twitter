@@ -40,8 +40,6 @@ x.com##[data-testid="primaryColumn"]:has([data-testid="UserName"]):not(:has([hre
 
 ! Timeline:Coversation
 x.com##:matches-path(/status) [data-testid="mask"] ~* [data-testid="cellInnerDiv"]:not(:has([data-testid="twitterArticleReadView"])):has(h2) ~*
-! Removes Post Engagements
-x.com##:matches-path(/status) [data-testid="tweet"] [href$="/quotes"]:upward(1)
 ! Premium upsell when you run out of characters
 x.com##:matches-path(/status) [data-testid="inline_reply_offscreen"] [href^="/i/premium_sign_up"]:upward(4)
 ! Premium upsell on articles
